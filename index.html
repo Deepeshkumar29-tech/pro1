@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Appointment System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Doctor Appointment System</h1>
+
+    <!-- LOGIN CARD -->
+    <div id="login-section" class="card">
+      <h2>Login</h2>
+
+      <label for="role">Login As</label>
+      <select id="role">
+        <option value="user">User</option>
+        <option value="admin">Admin</option>
+      </select>
+
+      <label for="username">Username</label>
+      <input type="text" id="username" placeholder="Enter username">
+
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter password">
+
+      <button id="loginBtn">Login</button>
+      <button id="showRegister">New user? Register</button>
+
+      <div id="loginMsg" class="info"></div>
+    </div>
+
+    <!-- REGISTER CARD -->
+    <div id="register-section" class="card hidden">
+      <h2>Register</h2>
+
+      <form id="registerForm">
+        <label for="regUsername">Username</label>
+        <input type="text" id="regUsername" placeholder="Choose username" required>
+
+        <label for="regPassword">Password</label>
+        <input type="password" id="regPassword" placeholder="Choose password" required>
+
+        <button type="submit">Register</button>
+        <button type="button" id="backToLogin">Back to Login</button>
+
+        <div id="registerMsg" class="info"></div>
+      </form>
+    </div>
+
+    <!-- USER DASHBOARD -->
+    <div id="user-section" class="card hidden">
+      <h2>User Dashboard</h2>
+      <button class="logout-btn" id="userLogout">Logout</button>
+
+      <h3>Book Appointment</h3>
+      <label for="patientName">Patient Name</label>
+      <input type="text" id="patientName">
+
+      <label for="doctor">Doctor</label>
+      <select id="doctor">
+        <option value="">Select Doctor</option>
+        <option value="Dr. Smith (Cardiologist)">Dr. Smith (Cardiologist)</option>
+        <option value="Dr. John (Dentist)">Dr. John (Dentist)</option>
+        <option value="Dr. Priya (Pediatrician)">Dr. Priya (Pediatrician)</option>
+      </select>
+
+      <label for="date">Select Date</label>
+      <input type="date" id="date">
+
+      <label for="slot">Select Time Slot</label>
+      <select id="slot">
+        <option value="">Select Slot</option>
+        <option>10:00 - 10:30 AM</option>
+        <option>10:30 - 11:00 AM</option>
+        <option>11:00 - 11:30 AM</option>
+        <option>11:30 - 12:00 PM</option>
+        <option>12:00 - 12:30 PM</option>
+        <option>12:30 - 1:00 PM</option>
+      </select>
+
+      <button id="bookBtn">Book Appointment</button>
+      <div id="bookingMsg" class="info"></div>
+
+      <h3>My Appointments</h3>
+      <table id="userTable">
+        <thead>
+          <tr>
+            <th>Doctor</th>
+            <th>Date</th>
+            <th>Slot</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <!-- ADMIN DASHBOARD -->
+    <div id="admin-section" class="card hidden">
+      <h2>Admin Dashboard</h2>
+      <button class="logout-btn" id="adminLogout">Logout</button>
+
+      <h3>All Appointments</h3>
+      <table id="adminTable">
+        <thead>
+          <tr>
+            <th>Patient</th>
+            <th>Doctor</th>
+            <th>Date</th>
+            <th>Slot</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+Node.js Dependencies for Doctor Appointment System
+
+Runtime Requirements:
+- Node.js v20+
+- npm (comes with Node.js)
+- MongoDB (local or cloud)
+
+npm Packages:
+- express@^5.2.1 - Web framework for Node.js
+- dotenv@^17.2.3 - Environment variable management
+- mongoose@^8.0.0 - MongoDB ODM (Object Document Mapper)
+
+Database:
+- MongoDB (local installation or MongoDB Atlas cloud)
+
+Installation on Local Computer:
+
+1. Install Node.js:
+   - Download from https://nodejs.org/ (LTS version)
+   - Verify: node --version && npm --version
+
+2. Install MongoDB:
+   - Download from https://www.mongodb.com/try/download/community
+   - Install and start MongoDB service
+   - Verify: mongosh --version
+
+3. Set up the Project:
+   - cd deeps
+   - npm install
+
+4. Configure .env file:
+   - MONGODB_URL=mongodb://localhost:27017/appointment
+   - PORT=5000
+
+5. Start MongoDB:
+   - mongod (or ensure MongoDB service is running)
+
+6. Run the Project:
+   - npm start
+   - Open browser: http://localhost:5000
+
+The application will automatically create collections (tables) on first use.
